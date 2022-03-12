@@ -1,0 +1,104 @@
+html{width: 100%; height: 100%}
+
+body {margin: 0;box-sizing: border-box; height: 100%}
+
+.body {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 5% 0;
+    background-image: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.body::after {
+    content: "";
+    width: 150px;
+    height: 100px;
+    background-image: url(../images/illustration-box-desktop.svg);
+    background-size: cover;
+    top: 42%;
+    left: 10%;
+    position: absolute;
+}
+@media (max-width: 830px) {
+    .body {padding: 120px 0 20px;}
+
+    .body::after {width: 25%; top: 15%; left: 15%}
+}
+.container {
+    font-size: 12px;
+    box-sizing: border-box;
+    width: 65%;
+    height: 100%;
+    margin: 0px auto;
+    padding: 40px 80px;
+    border-radius: 20px;
+    background-color: hsl(240, 5%, 91%);
+    display: flex;
+    flex-direction: row-reverse; 
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+@media (max-width: 1030px) {.container { width: 80%}}
+
+@media (max-width: 830px) {
+    .container {
+    width: 90%;
+    padding: 20px;
+    flex-flow: column-reverse wrap;
+    justify-content: flex-start;
+    overflow: initial;
+    text-align: center;
+    }
+}
+/* FQA Section */
+.content{box-sizing:border-box; min-height: 100%; flex-basis: 55%;}
+
+@media (max-width: 830px) {.content{min-height: initial; width: 100%}}
+
+.content section:first-of-type{margin-top: 50px}
+
+@media (max-width: 830px) {.content section:first-of-type{margin-top: 0px}}
+
+.content section div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid ;
+    border-color: rgb(207, 204, 204);
+}
+
+.content section div h3 {font-weight: 500}
+
+.content section div:hover {color: #f47b56; cursor: pointer}
+
+.content section div img {width: 3%; height: 3%}
+
+.content section div:hover img {width: 4%; height: 4%}
+
+.content section p {display: none; text-align: left;}
+
+/* Backgrounds */
+.backgrounds img {position: absolute}
+
+.backgrounds img:first-of-type {width: 95%; left: -55%; top: -50%}
+
+.backgrounds img:nth-of-type(2) {width: 50%; left: -10%; top: 10%}
+
+@media (max-width: 830px) {
+    .backgrounds img:first-of-type { 
+        width: 70%;
+        left: -20%;
+        top: -10%;
+        transform: translate(50%,-50%);
+    }
+    .backgrounds img:nth-of-type(2) {
+        width: 60%;
+        left: -10%;
+        top: -5%;
+        transform: translate(50%,-50%);
+    }  
+}
